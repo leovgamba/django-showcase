@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<form action="/sauth/authenticate/" method="post">{% csrf_token %}
+		<label for="username">Username or E-mail</label>
+		<input type="text" name="username" id="username">
+
+		<label for="password">Password</label>
+		<input type="password" name="password" id="password">		
+		
+		<input type="submit" value"Sign in!">
+	</form>
+{% endblock %}
